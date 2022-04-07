@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/*nav*/
+/*the nav bar style is the same on all pages*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    padding: 14px 31px;
+    width: 218px;
+    height: 52px;
+}
+
+.nav ul {
+    margin: 30px 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #94B8E8;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav ul li {
+    display: inline-block;
+    padding-left: 34px;
+}
+
+/*nav dropdown menu*/
+.nav-dropbtn {
+    background-color: white;
+    color: #94B8E8;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+}
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E6A3B7;
+    min-width: 190px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.nav-dropdown-content a {
+    padding: 8px 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-dropdown-content a:hover {
+    background-color: #AD6E82;
+    border-radius: 10px;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+.nav-dropdown:hover .nav-dropbtn {
+    color: #3D4756;
+}
+
+.nav a:hover {
+    color: #3D4756;
+}
+
+/*home page*/
+.home-header {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.home-header-img {
+    border: none;
+    width: 100%;
+    height: auto;
+}
+
+.home-header-title {
+    position: absolute;
+    font-size: 3vw;
+    font-weight: bold;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.home-header-subtitle {
+    position: absolute;
+    font-size: 1.8vw;
+    font-weight: normal;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+}
+
+.home-header-buttons {
+    position: absolute;
+    margin-left: 20vw;
+    top: 82%;
+}
+
+.home-header-buttons button {
+    font-size: 1.4vw;
+    border-radius: 20px;
+    background-color: #E6A3B7;
+    margin-left: 1vw;
+    border: none;
+    padding: 10px 15px;
+}
+
+.home-header-buttons button:hover {
+    background-color: #AD6E82;
+}
+
+.home-header-buttons a {
+    text-decoration: none;
+    color: white;
+}
+
+/*about page*/
+.about-body {
+    background-color: #94B8E8;
+    display:flex;
+    align-items: center;
+    height: 90vh;
+}
+
+.about-body-text {
+    color: white;
+    margin: 122px 5% 122px 5%;
+}
+
+.about-img {
+    width: 28%;
+    height: auto;
+    margin: 90px 5%;
+}
+
+.about-body-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3D4756;
+}
+
+.about-body-text p {
+    font-size: 24px;
+    font-weight: normal;
+    margin-right: 10vw;
+    max-width: 40vw;
+}
+
+/*faq page*/
+.faq-header-img {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+.faq-body {
+    background-color: #94B8E8;
+    color: white;
+    padding: 60px 109px;
+}
+
+.faq-body p {
+    font-size: 24px;
+}
+
+.faq-body h2 {
+    font-size: 24px;
+}
+
+/*activities pages*/
+/*these css styles are the same for each activity page: Winter Activities, Summer Activities, A Night Out, and Yummy Food*/
+.activities-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.activities-header h1 {
+    font-size: 3.5vw;
+    color: #94B8E8;
+}
+
+.activities-header-logo {
+    width: 15%;
+}
+
+.activities-body {
+    display: flex;
+    justify-content: space-between;
+    margin: 74px 71px;
+    gap: 10px;
+}
+
+.activities-body h2 {
+    color: #3D4756;
+    font-size: 2vw;
+}
+
+.activities-body h3 {
+    margin: 0;
+}
+
+.activities-body-div-1-list {
+    border-radius: 30px;
+    background-color: #E6A3B7;
+    color: white;
+    width: 40vw;
+    height: 597px;
+    padding: 2vw 0 0 2vw;
+    font-size: 1.8vw;
+}
+
+.activities-body-div-1-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activities-body-div-1-buttons {
+    padding-right: 45px;
+}
+
+.activities-body-div-1-buttons ul {
+    list-style: none;
+}
+
+.activities-body-div-1-buttons button {
+    font-size: 1.4vw;
+    width: 7vw;
+    border-radius: 20px;
+    background-color: #A1ACBD;
+    color: white;
+    margin-left: 1vw;
+    border: none;
+}
+
+.activities-body-div-1-buttons button:hover {
+    background-color: #3D4756;
+}
+
+.activities-body-div-2-list {
+    border-radius: 30px;
+    background-color: #AD6E82;
+    color: white;
+    width: 40vw;
+    height: 597px;
+    padding: 20px 0 0 20px;
+    font-size: 1.8vw;
+}

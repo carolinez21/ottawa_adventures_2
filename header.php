@@ -30,6 +30,6 @@
             <li><a href="about.html">About</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="">Log In</a></li>
+            <li><a href="login.php">Log In</a></li>
         </ul>
     </div>

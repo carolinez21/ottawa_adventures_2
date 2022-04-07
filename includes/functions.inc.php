@@ -104,7 +104,8 @@ function loginUser($conn, $email, $pwd) {
     else if ($checkPwd === true){
         session_start();
         $_SESSION["userid"] = $emailExists["usersId"];
-        $_SESSION["email"] = $emailExists["usersEmail"];
+        $_SESSION["useremail"] = $emailExists["usersEmail"];
+        $_SESSION["userfname"] = $emailExists["usersFirstName"];
         header("location: ../index.php");
         exit();
     }

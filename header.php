@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script/script.js" defer></script>
 </head>
 <body>
     <!--Nav bar-->
@@ -24,10 +25,10 @@
                 <div class="nav-dropdown">
                     <button class="nav-dropbtn">Build Your Adventure</button>
                     <div class="nav-dropdown-content">
-                        <a href="winter.html">Winter Activities</a>
-                        <a href="summer.html">Summer Activities</a>
-                        <a href="night.html">A Night Out</a>
-                        <a href="food.html">Yummy Food</a>
+                        <a href="winter.php">Winter Activities</a>
+                        <a href="summer.php">Summer Activities</a>
+                        <a href="night.php">A Night Out</a>
+                        <a href="food.php">Yummy Food</a>
                     </div>
                 </div>
             </li>

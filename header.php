@@ -15,7 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="script/script.js" defer></script>
 </head>
-<body>
+<?php
+    if (basename($_SERVER['PHP_SELF']) == "signup.php" || basename($_SERVER['PHP_SELF']) == "login.php"){
+        echo "<body class='signup'>";
+    } else {
+        echo "<body>";
+    }
+?>
     <!--Nav bar-->
     <div class="nav">
         <img class="nav-logo" src="images/logo.png" alt="black and white logo of Ottawa's parliament"/>

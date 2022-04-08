@@ -32,7 +32,7 @@
                 </div>
             </li>
             <li><a href="about.php">About</a></li>
-            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="faq.php">FAQ</a></li>
             <?php
                 if (isset($_SESSION["useremail"])){
                     echo "<li><a href='profile.php'>Profile</a></li>";

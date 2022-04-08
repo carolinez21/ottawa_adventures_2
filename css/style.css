@@ -194,6 +194,11 @@ body {
     font-size: 24px;
 }
 
+.faq-body a {
+    text-decoration: none;
+    color: #3D4756;
+}
+
 /*activities pages*/
 /*these css styles are the same for each activity page: Winter Activities, Summer Activities, A Night Out, and Yummy Food*/
 .activities-header {

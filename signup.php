@@ -4,7 +4,8 @@
 
     <!--Sign Up form-->
     <div class="signup-form">
-      <h2>Sign Up</h2>
+      <h2>Welcome to</h2>
+      <h1>OTTAWA ADVENTURES</h1>
       <div class="signup-form-form">
         <form action="includes/signup.inc.php" method="post">
           <input type="text" name="firstname" placeholder="First Name">

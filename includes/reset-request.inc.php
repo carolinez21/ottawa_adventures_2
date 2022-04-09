@@ -1,6 +1,6 @@
 <?php
 
-    require('../PHPMailer/vendor/autoload.php');
+    require('../PHPMailer/PHPMailerAutoload.php');
 
 
 if (isset($_POST["reset-request-submit"])){
@@ -49,7 +49,7 @@ if (isset($_POST["reset-request-submit"])){
     $mail->Username = 'ottadventures4@gmail.com';                 
     $mail->Password = 'exploreott1';                           
     $mail->SMTPSecure = 'tls';                            
-    $mail->Port = 587; 
+    $mail->Port = '587'; 
 
     $mail->setFrom('ottadventures4@gmail.com', 'Mailer');
     $mail->addAddress($userEmail);                  
@@ -66,7 +66,7 @@ if (isset($_POST["reset-request-submit"])){
         echo 'Message has been sent';
     }
 
-    $to = $userEmail;
+    /*$to = $userEmail;
 
     $subject = 'Reset your password for Ottawa Adventures';
 
@@ -78,7 +78,7 @@ if (isset($_POST["reset-request-submit"])){
     $headers .= "Reply-To: ottadventures4@gmail.com\r\n";
     $headers .= "Content-type: text/html\r\n";
 
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers);*/
 
     header("Location: ../reset-password.php?reset=success");
 

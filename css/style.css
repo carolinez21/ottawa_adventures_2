@@ -361,3 +361,33 @@ input[type=text], input[type=password] {
     color: #3D4756;
     font-size: 18px;
 }
+
+/*profile page*/
+.profile {
+    margin: 70px auto 0px;
+    width: 80vw;
+}
+
+.profile h1{
+    font-size: 36px;
+    color: #3D4756;
+    margin: 0;
+}
+
+.profile h2 {
+    font-size: 24px;
+    color: #E6A3B7;
+}
+
+.profile p {
+    font-size: 18px;
+    color: #3D4756;
+}
+
+.login-info, .personal-info {
+    background-color: white;
+    width: 75vw;
+    margin-top: 40px;
+    border-radius: 30px;
+    padding: 20px 50px;
+}

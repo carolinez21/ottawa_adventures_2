@@ -16,7 +16,7 @@
     <script src="script/script.js" defer></script>
 </head>
 <?php
-    if (basename($_SERVER['PHP_SELF']) == "signup.php" || basename($_SERVER['PHP_SELF']) == "login.php"){
+    if (basename($_SERVER['PHP_SELF']) == "signup.php" || basename($_SERVER['PHP_SELF']) == "login.php" || basename($_SERVER['PHP_SELF']) == "reset-password.php" || basename($_SERVER['PHP_SELF']) == "profile.php"){
         echo "<body class='signup'>";
     } else {
         echo "<body>";

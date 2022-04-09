@@ -102,10 +102,21 @@ function loginUser($conn, $email, $pwd) {
         exit();
     }
     else if ($checkPwd === true){
+        if(isset($_POST['remember-me'])){
+            $days = 30;
+            setcookie("email",$email,time()+$days*24*60*60*1000, '/');
+            setcookie("pwd", $pwd, time()+$days*24*60*60*1000, '/');
+        }
+        else {
+            setcookie('email', $email, 30, '/');
+            setcookie('pwd', $pwd, 30, '/');
+        }
         session_start();
         $_SESSION["userid"] = $emailExists["usersId"];
         $_SESSION["useremail"] = $emailExists["usersEmail"];
         $_SESSION["userfname"] = $emailExists["usersFirstName"];
+        $_SESSION["userlname"] = $emailExists["usersLastName"];
+        
         header("location: ../index.php");
         exit();
     }

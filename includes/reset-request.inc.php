@@ -47,7 +47,7 @@ if (isset($_POST["reset-request-submit"])){
     $mail->Host = 'smtp.gmail.com';  
     $mail->SMTPAuth = true;                               
     $mail->Username = 'ottadventures4@gmail.com';                 
-    $mail->Password = 'exploreott1';                           
+    $mail->Password = '';                           
     $mail->SMTPSecure = 'tls';                            
     $mail->Port = '587'; 
 

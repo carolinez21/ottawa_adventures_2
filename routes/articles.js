@@ -25,19 +25,6 @@ router.put('/:id', async (req, res, next) => {
     res.redirect(`/articles/${article.slug}`);
 });
 
-router.get('/search', function (req, res, next){
-    var q = req.query.q;
-    let article = Article.find({
-        $text: {
-            $search: q
-        }
-    }, {
-        _id: 0,
-        _v: 0
-    }, function (erro, data) {
-        res.json(data);
-    });
-})
 
 function saveArticleAndRedirect(path){
     return async (req, res) => {

@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </li>
-            <li><a href="posts.ejs">Blog</a></li>
+            <li><a href="http://localhost:5000/">Blog</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="faq.php">FAQ</a></li>
             <?php

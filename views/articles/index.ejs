@@ -1,6 +1,7 @@
 <%- include('header.ejs') %>
 
     <div class="blog-home">
+        <!--Blog home page header with search bar and new article button-->
         <div class="blog-home-header">
             <h1>Blog Articles</h1>
             <p>Search
@@ -10,6 +11,7 @@
             <button class="blog-home-btn"><a href="/articles/new">New Article</a></button>
         </div>
 
+        <!--List of all articles-->
         <% articles.forEach(article => {%>
             <div>
                 <div class="blog-home-article">
@@ -27,34 +29,33 @@
                 </div>
             </div>
         <%})%>
-    </div>
-
-    <script>
-        function sendData(e) {
-            const searchResults = document.getElementById('searchResults');
-            let match = e.value.match(/\s*/);
-            if(match[0] === e.value) {
-                searchResults.innerHTML = '';
-                return;
-            }
-            fetch('/getArticles', {
-                method: 'POST',
-                headers: {'Content-Type': "application/json"},
-                body: JSON.stringify({payload: e.value})
-            }).then(res => res.json()).then(data=>{
-                let payload = data.payload;
-                console.log(payload);
-                searchResults.innerHTML = "";
-                if(payload.length < 1){
-                    searchResults.innerHTML = '<p>Sorry. Nothing matches your search</p>'
+        <!--script for search function-->
+        <script>
+            function sendData(e) {
+                const searchResults = document.getElementById('searchResults');
+                let match = e.value.match(/\s*/);
+                if(match[0] === e.value) {
+                    searchResults.innerHTML = '';
                     return;
                 }
-                payload.forEach((item, index) => {
-                    if(index > 0) searchResults.innerHTML += `<p><a href=/articles/${item.slug}>${item.title}</a></p>`;
+                fetch('/getArticles', {
+                    method: 'POST',
+                    headers: {'Content-Type': "application/json"},
+                    body: JSON.stringify({payload: e.value})
+                }).then(res => res.json()).then(data=>{
+                    let payload = data.payload;
+                    searchResults.innerHTML = "";
+                    if(payload.length < 1){
+                        searchResults.innerHTML = '<p>Sorry. Nothing matches your search</p>'
+                        return;
+                    }
+                    payload.forEach((item, index) => {
+                        searchResults.innerHTML += `<p><a href=/articles/${item.slug}>${item.title}</a></p>`;
+                    });
+                    return;
                 });
-                return;
-            });
-        }
-    </script>
+            }
+        </script>
+    </div>
 </body>
 </html>

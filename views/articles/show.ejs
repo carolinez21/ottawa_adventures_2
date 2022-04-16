@@ -1,6 +1,8 @@
 <%- include('header.ejs') %>
 
+    <!--Individual Article Page in detail-->
     <div class="article">
+        <!--Article details-->
         <h1><%= article.title %></h1>
         <div><%= article.createdAt.toLocaleDateString() %></div>
         <div class="article-buttons">
@@ -44,6 +46,7 @@
             </div>
         </div>
 
+        <!--Script for like button-->
         <script>
             function liked() {
                 var element = document.getElementById("like");

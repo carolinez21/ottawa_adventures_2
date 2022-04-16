@@ -221,6 +221,7 @@ body {
 
 .article-text {
     font-size: 14pt;
+    margin-right: 60px;
 }
 
 .like {
@@ -236,7 +237,7 @@ body {
     color: white;
 }
 
-
+/*comments form*/
 .comment-form-header {
     font-size: 12pt;
     margin-top: 10px;
@@ -253,6 +254,8 @@ body {
     border: 1px solid lightgray;
     margin: 5px 0px;
     padding: 10px;
+    font-family: "Roboto", sans-serif;
+    color: #3D4756;
 }
 
 .comment-submit-btn {
@@ -285,6 +288,7 @@ body {
     border: 1px solid lightgray;
     margin: 10px 0px;
     padding: 10px;
+    font-family: "Roboto", sans-serif;
 }
 
 .cancel-btn {

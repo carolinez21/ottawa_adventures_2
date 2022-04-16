@@ -1,17 +1,26 @@
 <%- include('header.ejs') %>
 
-    <div class="container article">
-        <h1 class="mb-1"><%= article.title %></h1>
-        <div class="text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
-        <a href="/" class="btn btn-secondary">All Articles</a>
-        <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-
-        <div>
-            <%= article.markdown %>
+    <div class="article">
+        <h1><%= article.title %></h1>
+        <div><%= article.createdAt.toLocaleDateString() %></div>
+        <div class="article-buttons">
+            <button class="article-btn"><a href="/">All Articles</a></button>
         </div>
 
+        <div class="article-text">
+            <%= article.content %>
+        </div>
+
+        <!--Comments Section-->
         <div>
-            <button id="like" onclick="liked()">
+            <h3>Comments:</h3>
+            <%= article.comment %>
+            <p>--- <%= article.name %></p>
+        </div>
+
+        <!--Like button-->
+        <div class="like-btn">
+            <button id="like" class="like" onclick="liked()">
                 <i class="fa fa-thumbs-up"></i>
                 <span class="icon">Like</span>
             </button>
@@ -24,19 +33,14 @@
                 <form action="/articles/<%= article.id %>?_method=PUT" method="post">
                     <input type="hidden" name="article-id" value="<%= article.id %>"/>
                     <div class="form-group">
-                        <input class="form-control" name="name"/>
+                        <input class="form-control" name="name" placeholder="Name"/>
                     </div>
                     
                     <div class="form-group">
-                        <textarea class="form-control" name="comment" id="comment" rows="3"></textarea>
+                        <textarea class="form-control" name="comment" id="comment" rows="3" placeholder="Comment"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="comment-submit-btn">Submit</button>
                 </form>
-            </div>
-            <div>
-                <h2>Comments:</h2>
-                <%= article.comment %>
-                <p>--- <%= article.name %></p>
             </div>
         </div>
 
@@ -46,19 +50,6 @@
                 element.classList.toggle("liked");
             }
         </script>
-        <!--<script>
-            function doComment(form) {
-                $.ajax({
-                    url: "/do-comment",
-                    method: "post",
-                    data: {username: form.username.value, comment: form.comment.value, article_id: form.article-slug.value},
-                    success: function (response) {
-                        alert(response);
-                    }
-                })
-                return false;
-            }
-        </script>-->
     </div>
 </body>
 </html>

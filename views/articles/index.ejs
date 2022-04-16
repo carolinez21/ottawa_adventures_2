@@ -1,27 +1,27 @@
 <%- include('header.ejs') %>
 
-    <div class="container blog-home">
+    <div class="blog-home">
         <div class="blog-home-header">
-            <h1 class="mb-4">Blog Articles</h1>
+            <h1>Blog Articles</h1>
             <p>Search
             <input type="text" id="search-box" onkeyup="sendData(this)"/></p>
             <section id="searchResults">
             </section>
-            <button class="blog-home-btn"><a href="/articles/new" class="btn btn-sucess">New Article</a></button>
+            <button class="blog-home-btn"><a href="/articles/new">New Article</a></button>
         </div>
 
         <% articles.forEach(article => {%>
-            <div class="card mt-4">
-                <div class="card-body blog-home-article">
-                    <h4 class="card-title blog-home-article-title"><%= article.title %></h4>
-                    <div class="card-subtitle text-muted mb-2 blog-home-article-date">
+            <div>
+                <div class="blog-home-article">
+                    <h4 class="blog-home-article-title"><%= article.title %></h4>
+                    <div class="blog-home-article-date">
                         <%= article.createdAt.toLocaleDateString() %>
                     </div>
-                    <div class="card-text mb-2 blog-home-article-description"><%= article.description %></div>
+                    <div class="blog-home-article-description"><%= article.description %></div>
                     <div class="blog-home-article-btns">
-                        <button class="article-read-btn"><a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a></button>
+                        <button class="article-read-btn"><a href="articles/<%= article.slug %>">Read More</a></button>
                         <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
-                            <button type="submit" class="btn btn-danger article-delete-btn">Delete</button>
+                            <button type="submit" class="article-delete-btn">Delete</button>
                         </form>
                     </div>
                 </div>

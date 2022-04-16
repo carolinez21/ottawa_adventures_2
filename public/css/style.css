@@ -194,3 +194,126 @@ body {
 }
 
 /*individual article page*/
+.article {
+    color: #242a35;
+    margin-left: 50px;
+}
+
+.article-btn {
+    font-size: 14pt;
+    border-radius: 20px;
+    background-color: #94B8E8;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin: 10px 0px 30px 0px;
+}
+
+.article-btn a{
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.article-buttons button:hover {
+    background-color: #242a35;
+}
+
+.article-text {
+    font-size: 14pt;
+}
+
+.like {
+    background-color: #E6A3B7;
+    color: #242a35;
+    margin-top: 20px;
+    font-size: 11pt;
+    border-radius: 10px;
+}
+
+.liked {
+    background-color: #AD6E82;
+    color: white;
+}
+
+
+.comment-form-header {
+    font-size: 12pt;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+.form-control {
+    width: 40%;
+    font-size: 12pt;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    margin: 5px 0px;
+    padding: 10px;
+}
+
+.comment-submit-btn {
+    font-size: 12pt;
+    border-radius: 10px;
+    background-color: #3D4756;
+    border: none;
+    color: white;
+    padding: 5px;
+}
+
+.comment-submit-btn:hover {
+    background-color: #242a35;
+}
+/*create new article page*/
+.new-article {
+    color: #242a35;
+    margin-left: 50px;
+}
+
+.new-article .form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+}
+
+.new-article .form-control {
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.cancel-btn {
+    font-size: 12pt;
+    border-radius: 10px;
+    background-color: #E6A3B7;
+    border: none;
+    color: white;
+    padding: 5px;
+}
+
+.cancel-btn:hover {
+    background-color: #AD6E82;
+}
+
+.save-btn {
+    font-size: 12pt;
+    border-radius: 10px;
+    background-color: #94B8E8;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.save-btn:hover {
+    background-color: #3D4756;
+}
+
+.new-article a {
+    text-decoration: none;
+}
